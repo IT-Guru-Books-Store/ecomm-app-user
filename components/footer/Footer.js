@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 import { MdAddIcCall } from "react-icons/md";
@@ -9,9 +8,6 @@ import { BsInstagram } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
-
-import loc from "../../assets/svg/location.svg";
-import mail from "../../assets/svg/mail.svg";
 
 const Footer = () => {
   return (
