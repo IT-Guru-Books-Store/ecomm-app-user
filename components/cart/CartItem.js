@@ -24,14 +24,14 @@ const CartItem = ({ item }) => {
               Rs. {item.price}
             </span>
           </div>
-          <div className="flex gap-3 bg-gray-100 mt-3 w-[100%] justify-center">
-            <button className="">
+          <div className="flex mt-3 w-30">
+            <button className="bg-gray-200 px-2">
               <IoIosRemove />
             </button>
-            <span className="w-[50%] flex justify-center border-solid border-2">
+            <span className="w-[60px] flex justify-center border-solid border-2">
               {item.quantity}
             </span>
-            <button>
+            <button className="bg-gray-200 px-2">
               <IoIosAdd />
             </button>
           </div>
