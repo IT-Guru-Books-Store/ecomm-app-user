@@ -34,7 +34,7 @@ const CartTotal = () => {
         type="button"
         className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg mb-8"
       >
-        Checkout
+        Proceed to Checkout
       </button>
     </div>
   );
