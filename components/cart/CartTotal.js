@@ -7,9 +7,9 @@ const CartTotal = () => {
   const total = "500.00";
   // **
   return (
-    <div>
+    <div className="max-w-[500px] mx-auto mt-5 lg:mt-0">
       <div className="rounded-lg  text-black my-2 py-5 shadow-2xl">
-        <div className="flex justify-center ">
+        <div className="flex justify-center mb-5">
           <h1 className="text-lg ">Overview</h1>
         </div>
         <div className="flex flex-col gap-3 mx-5 font-semibold text-gray-400">
@@ -19,7 +19,9 @@ const CartTotal = () => {
           </div>
           <div className="flex justify-between">
             <span>Delivery</span>
-            <span>Rs. {deliveryFee}</span>
+            <span className="bg-green-500 rounded-md text-white p-1">
+              Rs. {deliveryFee}
+            </span>
           </div>
         </div>
         <hr className="h-px my-5 bg-gray-200 border-0 mx-5"></hr>
@@ -30,7 +32,7 @@ const CartTotal = () => {
       </div>
       <button
         type="button"
-        className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg"
+        className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg mb-8"
       >
         Checkout
       </button>

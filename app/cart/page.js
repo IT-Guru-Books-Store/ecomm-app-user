@@ -1,16 +1,30 @@
 import CartItem from "@/components/cart/CartItem";
-import CartItemTable from "@/components/cart/CartItemTable";
 import CartTotal from "@/components/cart/CartTotal";
 import { cartData } from "@/data/dataModels";
 import React from "react";
 
 const Cart = () => {
-  const number = 3;
   return (
-    <div className="grid grid-cols-1 mx-[16px]">
-      <CartItem item={cartData[0]} />
-      <CartItem item={cartData[1]} />
-      <CartTotal />
+    <div>
+      <div className="max-w-6xl mx-[16px] sm:mx-[128px] lg:mx-auto mt-8">
+        <h1 className="flex items-center text-2xl">
+          My Cart{" "}
+          <span className="bg-blue-100 text-[#073763] text-[13px] px-2.5 py-0.1 rounded dark:bg-blue-200 ark:text-blue-800 ms-2">
+            4 books
+          </span>
+        </h1>
+      </div>
+      <div className="max-w-6xl mx-[16px] sm:mx-[128px] lg:grid md:grid-cols-2 lg:gap-3 lg:mx-auto">
+        <div>
+          <CartItem item={cartData[0]} />
+          <CartItem item={cartData[1]} />
+          <CartItem item={cartData[1]} />
+          <CartItem item={cartData[0]} />
+        </div>
+        <div>
+          <CartTotal />
+        </div>
+      </div>
     </div>
   );
 };

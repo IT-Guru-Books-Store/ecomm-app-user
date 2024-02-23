@@ -4,7 +4,7 @@ import { MdDeleteOutline } from "react-icons/md";
 
 const CartItem = ({ item }) => {
   return (
-    <div className="bg-white p-4 my-2 border-b border-gray-100">
+    <div className="bg-white p-4 my-4 border-b border-gray-100 max-w-[500px] mx-auto">
       <div className="flex flex-row">
         <img
           src={item.img}
@@ -37,7 +37,6 @@ const CartItem = ({ item }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row"></div>
     </div>
   );
 };
