@@ -26,7 +26,7 @@ const NavBar = () => {
     <div className="lg:h-[80px] lg:w-[85%] md:max-lg:w-full w-full">
       {/* desktop */}
       <div className="hidden md:block w-full">
-        <div className="flex flex-row p-5 items-baseline justify-center">
+        <div className="flex flex-row p-5 items-center justify-center">
           <div className="flex items-center justify-center bg-[#f1c132] md:max-lg:w-[100px] lg:w-[149px] md:max-lg:h-[35px] lg:h-[42px] lg:p-5 md:max-lg:ml-[5%]">
             IT GURU
           </div>
