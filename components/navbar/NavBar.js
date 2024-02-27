@@ -23,17 +23,45 @@ const NavBar = () => {
   };
 
   return (
-    <div className="lg:h-[80px] lg:w-[85%] md:max-lg:w-full w-full">
+    <div className="w-full md:max-lg:w-full lg:h-[80px] lg:w-[80%] bg-orange-200">
       {/* desktop */}
       <div className="hidden md:block w-full">
-        <div className="flex flex-row p-5 items-center justify-center">
+        <div className="flex flex-row p-5 items-center justify-between">
           <div className="flex items-center justify-center bg-[#f1c132] md:max-lg:w-[100px] lg:w-[149px] md:max-lg:h-[35px] lg:h-[42px] lg:p-5 md:max-lg:ml-[5%]">
             IT GURU
           </div>
-          <div className="md:max-lg:ml-[5%] lg:ml-[10%]">
+          <div className="md:max-lg:ml-[5%] lg:ml-[0%]">
             <SearchBar />
           </div>
-          <div className="md:max-lg:ml-[4.5%] lg:ml-[8%]">
+          <div className="flex flex-row items-center gap-10 bg-green-200">
+            {/* className="md:max-lg:ml-[4.5%] lg:ml-[0%]" */}
+            <div>
+              {/* className="md:max-lg:h-[200%] md:max-lg:w-[150%] lg:h-[200%] lg:w-[200%]" */}
+              <BsCart3
+                className="md:max-lg:h-[100%] md:max-lg:w-[100%] lg:h-[100%] lg:w-[200%]"
+                color="#073763"
+              />
+            </div>
+            <div className="flex flex-row items-center justify-end gap-4 ">
+              <div>
+                <CgProfile
+                  className="md:max-lg:h-[100%] md:max-lg:w-[100%] lg:h-[100%] lg:w-[200%]"
+                  color="#073763"
+                />
+              </div>
+              <div className="ml-1">
+                <p className="md:text-sm text-[#073763] font-medium">
+                  Login / Register
+                </p>
+              </div>
+            </div>
+            {/* <div>
+              <p className="md:text-sm text-[#073763] font-medium">
+                Login / Register
+              </p>
+            </div> */}
+          </div>
+          {/* <div className="md:max-lg:ml-[4.5%] lg:ml-[8%]">
             <BsCart3
               className="md:max-lg:h-[200%] md:max-lg:w-[150%] lg:h-[200%] lg:w-[200%]"
               color="#073763"
@@ -49,7 +77,7 @@ const NavBar = () => {
             <p className="md:text-xs text-[#073763] font-medium">
               Login / Register
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* mobile */}
@@ -67,9 +95,9 @@ const NavBar = () => {
         </div>
       </div>
       {toggle && (
-        <div className="w-full mt-2 ml-2 h-[380px] flex justify-start ">
+        <div className="w-full mt-2 ml-2 h-[380px] flex justify-start absolute z-20">
           <ol className="flex flex-col gap-y-5 md:hidden text-[#000045] font-semibold rounded-lg w-[60%] justify-start bg-gradient-to-r from-[#d4edf6] to-[#ffffff]  bg-opacity-95 text-lg h-full">
-            <li className="ml-4 mt-4 ">
+            <li className="ml-4 mt-4">
               <Link
                 href="/"
                 onClick={() => {
