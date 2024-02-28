@@ -11,7 +11,7 @@ export default function Home() {
       <div className="bg-blue-500 w-full">
         <h1 className="text-[#073763] text-[20px]">All Books</h1>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 mt-[10px] w-full justify-items-center gap-y-4">
+      <div className="grid grid-cols-2 md:max-xl:grid-cols-4 xl:grid-cols-5 mt-[10px] w-full justify-items-center gap-y-4">
         {/* row1 */}
         <div>
           <BookCard />
