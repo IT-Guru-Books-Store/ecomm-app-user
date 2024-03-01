@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const BookCard = () => {
   return (
-    <div className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl md:max-xl:w-[145px] xl:w-[230px]">
+    <div className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl md:max-xl:w-[145px] xl:w-[230px] md:hover:border-[#073763] md:hover:border-2">
       <div className="relative mx-4 mt-4 p-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl md:max-xl:h-[50px] xl:h-[190px] bg-[#f5f5f5]">
         {/* <img
           src="https://media.gettyimages.com/id/1329616170/vector/brochure-cover-design-layout-for-business-stock-illustration.jpg?s=1024x1024&w=gi&k=20&c=Bvv5pm3_7fQcfirmfHaD_U9a1SKdJHkW_0y18oIKuWA="

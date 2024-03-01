@@ -4,8 +4,14 @@ import { React, useState } from "react";
 const DropDown = (props) => {
   const [toggle, setToggle] = useState(false);
 
+  const [selectedChoice, setSelectedChoice] = useState(false);
+
   const popDown = () => {
     setToggle((prev) => !prev);
+  };
+
+  const handleClick = (item) => {
+    setSelectedChoice(item);
   };
 
   const closePopUp = () => {
@@ -40,15 +46,14 @@ const DropDown = (props) => {
       </button>
       {/* Dropdown menu */}
       {toggle && (
-        <div className="z-10 absolute w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+        <div className="z-10 absolute mt-[3px] w-48 bg-white rounded-lg border-[#073763] border-2">
           <ul
             className="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200"
             aria-labelledby="dropdownRadioButton"
           >
-            <li>
+            {/* <li>
               <div className="flex items-center">
                 <input
-                  checked
                   id="default-radio-1"
                   type="radio"
                   value=""
@@ -62,60 +67,26 @@ const DropDown = (props) => {
                   none
                 </label>
               </div>
-            </li>
+            </li> */}
             {props.values.map((item) => (
-              <li key={item}>
+              <li key={item} onClick={() => handleClick(item)}>
                 <div className="flex items-center">
                   <input
+                    checked={selectedChoice == item}
                     type="radio"
                     value=""
                     name="default-radio"
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                    className="w-3 h-3 rounded-none text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
                     htmlFor={item}
-                    className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    className="ms-2 text-sm font-medium text-[#073763]"
                   >
                     {item}
                   </label>
                 </div>
               </li>
             ))}
-            {/* <li>
-              <div className="flex items-center">
-                <input
-                  checked
-                  id="default-radio-2"
-                  type="radio"
-                  value=""
-                  name="default-radio"
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                />
-                <label
-                  htmlFor="default-radio-2"
-                  className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >
-                  Checked state
-                </label>
-              </div>
-            </li>
-            <li>
-              <div className="flex items-center">
-                <input
-                  id="default-radio-3"
-                  type="radio"
-                  value=""
-                  name="default-radio"
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                />
-                <label
-                  htmlFor="default-radio-3"
-                  className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >
-                  Default radio
-                </label>
-              </div>
-            </li> */}
           </ul>
         </div>
       )}

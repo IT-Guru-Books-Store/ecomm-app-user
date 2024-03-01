@@ -8,15 +8,16 @@ export default function Home() {
   const Grade = ["Grade 10", "Grade 11", "Grade 12"];
 
   return (
-    <div className="w-full flex flex-col mb-[30px]">
+    <div className="w-full flex flex-col place-items-center items mb-[30px]">
       {/* <h1 className="md:text-[2rem]">This is home page</h1> */}
       <div className="w-full mt-2 md:mt-4">
         <Slider />
       </div>
-      <div className="w-full flex flex-row px-5 py-2 items-center">
+      {/* <div className="hidden md:block w-full place-items-center"> */}
+      <div className="hidden md:flex w-[98%] border-black border-b-2 border-t-2 flex-row px-5 py-2 mt-3 items-center">
         <h1 className="text-[#073763] text-[20px] ">All Books</h1>
         <div className="flex flex-row items-center gap-3 ml-[10%]">
-          <h3 className="text-[#073763] text-[15px] ">Sort by</h3>
+          <h3 className="text-[#073763] text-[15px] ">Sort by :</h3>
           <div>
             <DropDown values={language} title={"language"} />
           </div>
@@ -28,6 +29,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* </div> */}
       <div className="grid grid-cols-2 md:max-xl:grid-cols-4 xl:grid-cols-5 mt-[10px] w-full justify-items-center gap-y-4">
         {/* row1 */}
         <div>
