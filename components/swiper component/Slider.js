@@ -26,7 +26,7 @@ const Slider = () => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-[400px] md:max-lg:w-[85%] md:max-lg:h-[85%] lg:w-[70%] lg:h-[70%]"
+        className="w-[400px] md:max-lg:w-[85%] md:max-lg:h-[85%] lg:w-[98%] lg:h-[10%]"
       >
         <SwiperSlide>
           <Image src={sl_1} />
