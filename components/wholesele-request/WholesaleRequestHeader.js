@@ -7,7 +7,7 @@ const WholesaleRequestHeader = () => {
         <span className="flex items-center justify-center w-5 h-5 me-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
           1
         </span>
-        Personal <span className="hidden sm:inline-flex sm:ms-2">Info</span>
+        Order <span className="hidden sm:inline-flex sm:ms-2">Details</span>
         <svg
           className="w-3 h-3 ms-2 sm:ms-4 rtl:rotate-180"
           aria-hidden="true"
@@ -28,7 +28,7 @@ const WholesaleRequestHeader = () => {
         <span className="flex items-center justify-center w-5 h-5 me-2 text-xs border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
           2
         </span>
-        Account <span className="hidden sm:inline-flex sm:ms-2">Info</span>
+        Sending <span className="hidden sm:inline-flex sm:ms-2">Request</span>
         <svg
           className="w-3 h-3 ms-2 sm:ms-4 rtl:rotate-180"
           aria-hidden="true"
@@ -49,7 +49,7 @@ const WholesaleRequestHeader = () => {
         <span className="flex items-center justify-center w-5 h-5 me-2 text-xs border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
           3
         </span>
-        Review
+        Approval
       </li>
     </ol>
   );

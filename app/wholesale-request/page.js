@@ -4,7 +4,9 @@ import React from "react";
 const WholesaleRequest = () => {
   return (
     <div>
-      <WholesaleRequestHeader />
+      <div className="mt-5">
+        <WholesaleRequestHeader />
+      </div>
     </div>
   );
 };
