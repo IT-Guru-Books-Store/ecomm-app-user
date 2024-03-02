@@ -9,7 +9,7 @@ const OrderItem = () => {
         <Image
           src={prodImg}
           alt="product-img"
-          className="rounded-lg w-[30%] object-cover"
+          className="rounded-lg w-[26%] object-cover"
         />
         <div className="flex-1 ml-4">
           <div className="flex flex-row items-start justify-between">

@@ -18,14 +18,14 @@ const Checkout = () => {
           <h2 className="text-xl">Billing Details</h2>
           {/* form */}
           <form>
-            <div className="grid md:grid-cols-2 gap-x-[32px]">
-              <div>
+            <div className="grid md:grid-cols-2 gap-x-[32px] md:my-2">
+              <div className="mt-2 md:mt-0">
                 <TextBox
                   placeholder={"Enter Your First Name"}
                   label={"First Name"}
                 />
               </div>
-              <div>
+              <div className="my-2 md:my-0">
                 <TextBox
                   placeholder={"Enter Your Last Name"}
                   label={"Last Name"}
@@ -35,7 +35,7 @@ const Checkout = () => {
             <div>
               <TextBox placeholder={"Enter Your Address"} label={"Address"} />
             </div>
-            <div>
+            <div className="my-2">
               <TextBox placeholder={"Enter Your City"} label={"City"} />
             </div>
             <div>
@@ -44,7 +44,7 @@ const Checkout = () => {
                 label={"Postal Code"}
               />
             </div>
-            <div>
+            <div className="my-2">
               <TextBox
                 placeholder={"Enter Your Mobile Number"}
                 label={"Mobile Number 1"}
@@ -56,7 +56,7 @@ const Checkout = () => {
                 label={"Mobile Number 2"}
               />
             </div>
-            <div>
+            <div className="my-2">
               <TextBox placeholder={"Enter Your Email"} label={"Email"} />
             </div>
             <div>
@@ -75,11 +75,15 @@ const Checkout = () => {
         {/* Right Coloumn */}
         <div className="flex flex-col w-full">
           {/* Your Order */}
-          <h2 className="text-xl">Your Order</h2>
-          <div className="max-w-[500px] mt-5 lg:mt-0 mx-[22%]">
+
+          <div className="max-w-[500px] mt-5 lg:mt-0 mx-[3%] md:mx-[20%]">
+            <h2 className="text-xl font-bold">Your Order</h2>
             <div className="rounded-lg text-black my-2 py-5 shadow-2xl">
-              <div className="flex justify-center mb-5">
-                <h1 className="text-lg ">Product</h1>
+              <div className="flex mb-5 ml-[8%]">
+                <h1 className="text-lg">Product</h1>
+              </div>
+              <div>
+                <OrderItem />
               </div>
               <div>
                 <OrderItem />
@@ -113,13 +117,15 @@ const Checkout = () => {
             </button> */}
           </div>
           {/* Payment method */}
-          <h2 className="text-xl">Payment method</h2>
 
-          <div className="max-w-[500px] mt-5 lg:mt-0 mx-[22%]">
+          <div className="max-w-[500px] mt-5 lg:mt-0 mx-[3%] md:mx-[20%]">
+            <div className="flex mb-5 mt-[4%]">
+              <h1 className="text-lg font-bold">Payment Method</h1>
+            </div>
             <div className="rounded-lg text-black my-2 py-5 shadow-2xl">
               {/* card payment */}
               <div className="flex">
-                <div class="flex flex-col w-full ps-4 border border-gray-200 rounded dark:border-gray-700">
+                <div class="flex flex-col w-full ps-4 border border-[#dddddd] rounded">
                   <div className="flex flex-row items-center">
                     <input
                       id="Card-Payment"
@@ -130,7 +136,7 @@ const Checkout = () => {
                     />
                     <label
                       for="Payment-method"
-                      class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      class="w-full py-4 ms-2 text-sm font-medium text-black"
                     >
                       Card Payment
                     </label>
@@ -138,7 +144,7 @@ const Checkout = () => {
                   <div>
                     <Image src={paymentImg} />
                   </div>
-                  <div>
+                  <div className="py-4">
                     <p>
                       Pay by Visa, MasterCard, AMEX, eZcash, mCash or Internet
                       Banking via PayHere.
@@ -149,7 +155,7 @@ const Checkout = () => {
               {/* Cash on Delivery */}
               <div className="flex mb-5">
                 {/* card payment */}
-                <div class="flex flex-col w-full ps-4 border border-gray-200 rounded dark:border-gray-700">
+                <div class="flex flex-col w-full ps-4 border border-[#dddddd] border-l border-r border-b rounded ">
                   <div className="flex flex-row items-center">
                     <input
                       id="Cash On Delivery"
@@ -160,22 +166,48 @@ const Checkout = () => {
                     />
                     <label
                       for="Payment-method"
-                      class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      class="w-full py-4 ms-2 text-sm font-medium text-black"
                     >
                       Cash On Delivery
                     </label>
                   </div>
                 </div>
               </div>
-
-              <hr className="h-px my-5 bg-gray-200 border-0 mx-5"></hr>
+              <p className="ps-4">
+                We will use your personal data to fulfill your order, enhance
+                your experience on our website, and for other purposes outlined
+                in our privacy policy.
+              </p>
+              <div class="flex items-center ps-4 py-2">
+                <input
+                  id="link-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="link-checkbox"
+                  class="ms-2 text-sm font-medium text-blue-600 dark:text-blue-500"
+                >
+                  I agree with the&nbsp;
+                  <a
+                    href="#"
+                    class="text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    terms and conditions
+                  </a>
+                  .
+                </label>
+              </div>
+              {/* <hr className="h-px my-5 bg-gray-200 border-0 mx-5"></hr> */}
             </div>
-            {/* <button
-  type="button"
-  className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg mb-8"
->
-  Proceed to Checkout
-</button> */}
+
+            <button
+              type="button"
+              className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg mb-8"
+            >
+              Place Order
+            </button>
           </div>
         </div>
       </div>
