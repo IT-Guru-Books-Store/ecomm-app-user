@@ -1,10 +1,14 @@
+"use client";
+import { React, useState } from "react";
+import Image from "next/image";
 import OrderItem from "@/components/orderItem/OrderItem";
 import TextBox from "@/components/textBox/TextBox";
-import React from "react";
+import paymentImg from "@/assets/images/payment-options.png";
 
 const Checkout = () => {
+  const [isChecked, setIsChecked] = useState(false);
   return (
-    <div className="w-full flex flex-col h-[100vh]">
+    <div className="w-full flex flex-col">
       <h1 className="text-[22px] font-bold text-[#073763] mt-4 ml-3">
         Checkout
       </h1>
@@ -68,10 +72,10 @@ const Checkout = () => {
             </div>
           </form>
         </div>
-        {/* Your Order */}
-        <div className="flex flex-col w-full h-[50vh]">
+        {/* Right Coloumn */}
+        <div className="flex flex-col w-full">
+          {/* Your Order */}
           <h2 className="text-xl">Your Order</h2>
-
           <div className="max-w-[500px] mt-5 lg:mt-0 mx-[22%]">
             <div className="rounded-lg text-black my-2 py-5 shadow-2xl">
               <div className="flex justify-center mb-5">
@@ -101,12 +105,77 @@ const Checkout = () => {
                 <span>Rs.400 </span>
               </div>
             </div>
-            <button
+            {/* <button
               type="button"
               className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg mb-8"
             >
               Proceed to Checkout
-            </button>
+            </button> */}
+          </div>
+          {/* Payment method */}
+          <h2 className="text-xl">Payment method</h2>
+
+          <div className="max-w-[500px] mt-5 lg:mt-0 mx-[22%]">
+            <div className="rounded-lg text-black my-2 py-5 shadow-2xl">
+              {/* card payment */}
+              <div className="flex">
+                <div class="flex flex-col w-full ps-4 border border-gray-200 rounded dark:border-gray-700">
+                  <div className="flex flex-row items-center">
+                    <input
+                      id="Card-Payment"
+                      type="radio"
+                      value=""
+                      name="Payment-method"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="Payment-method"
+                      class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >
+                      Card Payment
+                    </label>
+                  </div>
+                  <div>
+                    <Image src={paymentImg} />
+                  </div>
+                  <div>
+                    <p>
+                      Pay by Visa, MasterCard, AMEX, eZcash, mCash or Internet
+                      Banking via PayHere.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* Cash on Delivery */}
+              <div className="flex mb-5">
+                {/* card payment */}
+                <div class="flex flex-col w-full ps-4 border border-gray-200 rounded dark:border-gray-700">
+                  <div className="flex flex-row items-center">
+                    <input
+                      id="Cash On Delivery"
+                      type="radio"
+                      value=""
+                      name="Payment-method"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="Payment-method"
+                      class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >
+                      Cash On Delivery
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <hr className="h-px my-5 bg-gray-200 border-0 mx-5"></hr>
+            </div>
+            {/* <button
+  type="button"
+  className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg mb-8"
+>
+  Proceed to Checkout
+</button> */}
           </div>
         </div>
       </div>
