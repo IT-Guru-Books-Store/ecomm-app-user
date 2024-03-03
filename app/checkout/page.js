@@ -9,13 +9,13 @@ const Checkout = () => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <div className="w-full flex flex-col">
-      <h1 className="text-[22px] font-bold text-[#073763] mt-4 ml-3">
+      <h1 className="text-[22px] font-bold text-[#073763] mt-4 ml-3 mb-4">
         Checkout
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-[50px]">
         {/* billing details */}
         <div className="px-3">
-          <h2 className="text-xl">Billing Details</h2>
+          <h2 className="text-xl font-bold mb-3">Billing Details</h2>
           {/* form */}
           <form>
             <div className="grid md:grid-cols-2 gap-x-[32px] md:my-2">
@@ -77,7 +77,7 @@ const Checkout = () => {
           {/* Your Order */}
 
           <div className="max-w-[500px] mt-5 lg:mt-0 mx-[3%] md:mx-[20%]">
-            <h2 className="text-xl font-bold">Your Order</h2>
+            <h2 className="text-xl font-bold mb-8">Your Order</h2>
             <div className="rounded-lg text-black my-2 py-5 shadow-2xl">
               <div className="flex mb-5 ml-[8%]">
                 <h1 className="text-lg">Product</h1>
@@ -144,7 +144,7 @@ const Checkout = () => {
                   <div>
                     <Image src={paymentImg} />
                   </div>
-                  <div className="py-4">
+                  <div className="py-4 px-2">
                     <p>
                       Pay by Visa, MasterCard, AMEX, eZcash, mCash or Internet
                       Banking via PayHere.
@@ -173,7 +173,7 @@ const Checkout = () => {
                   </div>
                 </div>
               </div>
-              <p className="ps-4">
+              <p className="px-5">
                 We will use your personal data to fulfill your order, enhance
                 your experience on our website, and for other purposes outlined
                 in our privacy policy.
