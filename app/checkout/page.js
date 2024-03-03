@@ -60,13 +60,13 @@ const Checkout = () => {
               <TextBox placeholder={"Enter Your Email"} label={"Email"} />
             </div>
             <div>
-              <label for="Order Notes" class="block mb-2 text-sm">
+              <label for="Order Notes" className="block mb-2 text-sm">
                 Order Notes
               </label>
               <textarea
                 id="Order Notes"
                 rows="4"
-                class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-600 placeholder-gray-400"
+                className="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-600 placeholder-gray-400"
                 placeholder="Notes about your order, eg:- special notes for delivery"
               />
             </div>
@@ -125,18 +125,18 @@ const Checkout = () => {
             <div className="rounded-lg text-black my-2 py-5 shadow-2xl">
               {/* card payment */}
               <div className="flex">
-                <div class="flex flex-col w-full ps-4 border border-[#dddddd] rounded">
+                <div className="flex flex-col w-full ps-4 border border-[#dddddd] rounded">
                   <div className="flex flex-row items-center">
                     <input
                       id="Card-Payment"
                       type="radio"
                       value=""
                       name="Payment-method"
-                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     />
                     <label
                       for="Payment-method"
-                      class="w-full py-4 ms-2 text-sm font-medium text-black"
+                      className="w-full py-4 ms-2 text-sm font-medium text-black"
                     >
                       Card Payment
                     </label>
@@ -155,18 +155,18 @@ const Checkout = () => {
               {/* Cash on Delivery */}
               <div className="flex mb-5">
                 {/* card payment */}
-                <div class="flex flex-col w-full ps-4 border border-[#dddddd] border-l border-r border-b rounded ">
+                <div className="flex flex-col w-full ps-4 border border-[#dddddd] border-l border-r border-b rounded ">
                   <div className="flex flex-row items-center">
                     <input
                       id="Cash On Delivery"
                       type="radio"
                       value=""
                       name="Payment-method"
-                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     />
                     <label
                       for="Payment-method"
-                      class="w-full py-4 ms-2 text-sm font-medium text-black"
+                      className="w-full py-4 ms-2 text-sm font-medium text-black"
                     >
                       Cash On Delivery
                     </label>
@@ -178,21 +178,21 @@ const Checkout = () => {
                 your experience on our website, and for other purposes outlined
                 in our privacy policy.
               </p>
-              <div class="flex items-center ps-4 py-2">
+              <div className="flex items-center ps-4 py-2">
                 <input
                   id="link-checkbox"
                   type="checkbox"
                   value=""
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
                   for="link-checkbox"
-                  class="ms-2 text-sm font-medium text-blue-600 dark:text-blue-500"
+                  className="ms-2 text-sm font-medium text-blue-600 dark:text-blue-500"
                 >
                   I agree with the&nbsp;
                   <a
                     href="#"
-                    class="text-blue-600 dark:text-blue-500 hover:underline"
+                    className="text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     terms and conditions
                   </a>
