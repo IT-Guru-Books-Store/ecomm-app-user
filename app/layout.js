@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import NavBar from "@/components/navbar/NavBar";
 import NavBottom from "@/components/navbar/NavBottom";
 import Footer from "@/components/footer/Footer";
+import Providers from "@/redux/Providers";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -18,18 +19,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="flex flex-col w-full justify-center items-center">
-          <NavBar />
-        </div>
-        <div className="flex flex-col w-full justify-center items-center">
-          <NavBottom />
-        </div>
-        <div className="flex flex-col justify-center items-center">
-          <div className="md:w-[80%]">{children}</div>
-        </div>
-        <div>
-          <Footer />
-        </div>
+        <Providers>
+          <div className="flex flex-col w-full justify-center items-center">
+            <NavBar />
+          </div>
+          <div className="flex flex-col w-full justify-center items-center">
+            <NavBottom />
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <div className="md:w-[80%]">{children}</div>
+          </div>
+          <div>
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );
