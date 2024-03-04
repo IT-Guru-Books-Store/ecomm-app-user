@@ -3,9 +3,7 @@ import React from "react";
 const TextBox = (props) => {
   return (
     <div>
-      <label for={props.label} className="block mb-2 text-sm">
-        {props.label}
-      </label>
+      <label className="block mb-2 text-sm">{props.label}</label>
       <input
         type="text"
         id={props.label}

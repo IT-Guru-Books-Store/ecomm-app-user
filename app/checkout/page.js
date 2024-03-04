@@ -8,11 +8,144 @@ import paymentImg from "@/assets/images/payment-options.png";
 const Checkout = () => {
   const [isChecked, setIsChecked] = useState(false);
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col my-10">
       <h1 className="text-[22px] font-bold text-[#073763] mt-4 ml-3 mb-4">
         Checkout
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-[50px]">
+      {/* Desktop View */}
+      <div className="grid grid-cols-2">
+        {/* Left */}
+        <div className="flex flex-col gap-y-5">
+          <div className="w-full bg-slate-500 h-[130px]"></div>
+          <div className="w-full bg-slate-500">
+            {" "}
+            <div className="max-w-[500px] mt-5 lg:mt-0 mx-[3%] md:mx-[20%]">
+              <div className="flex mb-5 mt-[4%]">
+                <h1 className="text-lg font-bold">Payment Method</h1>
+              </div>
+              <div className="rounded-lg text-black my-2 py-5 shadow-2xl">
+                {/* card payment */}
+                <div className="flex">
+                  <div className="flex flex-col w-full ps-4 border border-[#dddddd] rounded">
+                    <div className="flex flex-row items-center">
+                      <input
+                        id="Card-Payment"
+                        type="radio"
+                        value=""
+                        name="Payment-method"
+                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label className="w-full py-4 ms-2 text-sm font-medium text-black">
+                        Card Payment
+                      </label>
+                    </div>
+                    <div>
+                      <Image src={paymentImg} />
+                    </div>
+                    <div className="py-4 px-2">
+                      <p>
+                        Pay by Visa, MasterCard, AMEX, eZcash, mCash or Internet
+                        Banking via PayHere.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* Cash on Delivery */}
+                <div className="flex mb-5">
+                  {/* card payment */}
+                  <div className="flex flex-col w-full ps-4 border border-[#dddddd] border-l border-r border-b rounded ">
+                    <div className="flex flex-row items-center">
+                      <input
+                        id="Cash On Delivery"
+                        type="radio"
+                        value=""
+                        name="Payment-method"
+                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label className="w-full py-4 ms-2 text-sm font-medium text-black">
+                        Cash On Delivery
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <p className="px-5">
+                  We will use your personal data to fulfill your order, enhance
+                  your experience on our website, and for other purposes
+                  outlined in our privacy policy.
+                </p>
+                <div className="flex items-center ps-4 py-2">
+                  <input
+                    id="link-checkbox"
+                    type="checkbox"
+                    value=""
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label className="ms-2 text-sm font-medium text-blue-600 dark:text-blue-500">
+                    I agree with the&nbsp;
+                    <a
+                      href="#"
+                      className="text-blue-600 dark:text-blue-500 hover:underline"
+                    >
+                      terms and conditions
+                    </a>
+                    .
+                  </label>
+                </div>
+                {/* <hr className="h-px my-5 bg-gray-200 border-0 mx-5"></hr> */}
+              </div>
+
+              <button
+                type="button"
+                className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg mb-8"
+              >
+                Place Order
+              </button>
+            </div>
+          </div>
+          <div className="w-full bg-slate-500">
+            <div className="rounded-lg text-black my-2 py-5 shadow-2xl">
+              <div className="flex mb-5 ml-[8%]">
+                <h1 className="text-lg">Product</h1>
+              </div>
+              <div>
+                <OrderItem />
+              </div>
+              <div>
+                <OrderItem />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Right */}
+        <div className="flex flex-row justify-end">
+          <div className="w-full bg-slate-500 max-w-[600px]">
+            <div className="rounded-lg text-black my-2 py-5 shadow-2xl">
+              <div className="flex justify-center mb-5">
+                <h1 className="text-lg ">Overview</h1>
+              </div>
+              <div className="flex flex-col gap-3 mx-5 font-semibold text-gray-400">
+                <div className="flex justify-between">
+                  <span>Sub Total</span>
+                  <span>Rs. 400</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Delivery</span>
+                  <span className="bg-green-500 rounded-md text-white p-1">
+                    Free
+                  </span>
+                </div>
+              </div>
+              <hr className="h-px my-5 bg-gray-200 border-0 mx-5"></hr>
+              <div className=" text-lg flex justify-between mx-5">
+                <span>Total</span>
+                <span>Rs.400 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Mobile View */}
+      <div className="md:hidden grid grid-cols-1 md:grid-cols-2 w-full gap-x-[50px]">
         {/* billing details */}
         <div className="px-3">
           <h2 className="text-xl font-bold mb-3">Billing Details</h2>
@@ -60,9 +193,7 @@ const Checkout = () => {
               <TextBox placeholder={"Enter Your Email"} label={"Email"} />
             </div>
             <div>
-              <label for="Order Notes" className="block mb-2 text-sm">
-                Order Notes
-              </label>
+              <label className="block mb-2 text-sm">Order Notes</label>
               <textarea
                 id="Order Notes"
                 rows="4"
@@ -134,10 +265,7 @@ const Checkout = () => {
                       name="Payment-method"
                       className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     />
-                    <label
-                      for="Payment-method"
-                      className="w-full py-4 ms-2 text-sm font-medium text-black"
-                    >
+                    <label className="w-full py-4 ms-2 text-sm font-medium text-black">
                       Card Payment
                     </label>
                   </div>
@@ -164,10 +292,7 @@ const Checkout = () => {
                       name="Payment-method"
                       className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     />
-                    <label
-                      for="Payment-method"
-                      className="w-full py-4 ms-2 text-sm font-medium text-black"
-                    >
+                    <label className="w-full py-4 ms-2 text-sm font-medium text-black">
                       Cash On Delivery
                     </label>
                   </div>
@@ -185,10 +310,7 @@ const Checkout = () => {
                   value=""
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
-                <label
-                  for="link-checkbox"
-                  className="ms-2 text-sm font-medium text-blue-600 dark:text-blue-500"
-                >
+                <label className="ms-2 text-sm font-medium text-blue-600 dark:text-blue-500">
                   I agree with the&nbsp;
                   <a
                     href="#"
