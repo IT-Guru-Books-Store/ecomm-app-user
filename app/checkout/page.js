@@ -12,6 +12,13 @@ const Checkout = () => {
       <h1 className="text-[22px] font-bold text-[#073763] mt-4 ml-3 mb-4">
         Checkout
       </h1>
+      {/*
+      town/city
+      2 numbers
+      remove email - postal code
+      district
+
+       */}
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-[50px]">
         {/* billing details */}
         <div className="px-3">

@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
           <div className="flex flex-col w-full justify-center items-center">
             <NavBottom />
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col md:justify-center md:items-center">
             <div className="md:w-[80%]">{children}</div>
           </div>
           <div>
