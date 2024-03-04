@@ -1,11 +1,12 @@
 import React from "react";
+import WholesaleOrderDetailsForm from "./order-details/WholesaleOrderDetailsForm";
+import WholeSaleBookList from "./order-details/WholeSaleBookList";
 
 const WholesaleOrderDetails = () => {
   return (
-    <div className="p-8 w-full max-w-4xl mt-6">
-      <form>
-        <div></div>
-      </form>
+    <div className="w-full mt-6 shadow rounded-lg p-6 border-spacing-1">
+      <WholesaleOrderDetailsForm />
+      <WholeSaleBookList />
     </div>
   );
 };
