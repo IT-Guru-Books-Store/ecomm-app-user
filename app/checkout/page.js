@@ -262,7 +262,6 @@ const Checkout = () => {
                 id="Order Notes"
                 rows="4"
                 className="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-600 placeholder-gray-400"
-                className="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-600 placeholder-gray-400"
                 placeholder="Notes about your order, eg:- special notes for delivery"
               />
             </div>
@@ -389,13 +388,12 @@ const Checkout = () => {
               {/* <hr className="h-px my-5 bg-gray-200 border-0 mx-5"></hr> */}
             </div>
 
-              <button
-                type="button"
-                className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg mb-8"
-              >
-                Place Order
-              </button>
-            </div>
+            <button
+              type="button"
+              className="w-[100%] font-bold text-lg text-white bg-[#073763] py-2.5 px-5 rounded-lg mb-8"
+            >
+              Place Order
+            </button>
           </div>
         </div>
       </div>
