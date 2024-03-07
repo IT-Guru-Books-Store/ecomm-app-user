@@ -13,7 +13,7 @@ const Checkout = () => {
         Checkout
       </h1>
       {/* Desktop View */}
-      <div className="grid grid-cols-2">
+      <div className="hidden md:grid grid-cols-2">
         {/* Left */}
         <div className="flex flex-col gap-y-5">
           <div className="w-full bg-[#f4f4f4] py-4 px-2">
