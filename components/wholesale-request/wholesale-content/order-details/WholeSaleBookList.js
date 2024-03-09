@@ -8,10 +8,12 @@ const WholeSaleBookList = () => {
     setBookList([
       {
         name: "ICT - AL - 2013",
+        desc: "none",
         qty: 10,
       },
       {
         name: "SFT - AL - 2013",
+        desc: "none",
         qty: 20,
       },
     ]);
@@ -19,15 +21,21 @@ const WholeSaleBookList = () => {
 
   return (
     <div>
-      <h3>Books</h3>
+      <h3 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Books
+      </h3>
       <div>
-        <p>Added Books</p>
-        <div>
+        <p className="block mb-1 text-sm font-normal text-gray-400 dark:text-gray-200">
+          Added Books
+        </p>
+        <div className="p-3 shadow-md rounded-md">
           {bookList?.map((book) => {
             return (
               <div key={book}>
                 <span>{book.name}</span>
+                <button>-</button>
                 <span>{book.qty}</span>
+                <button>+</button>
               </div>
             );
           })}
