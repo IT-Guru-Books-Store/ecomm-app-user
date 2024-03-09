@@ -1,7 +1,15 @@
 "use client";
 import { React, useEffect, useState } from "react";
+import OrderView from "../orderView/OrderView";
 
 const OrderTable = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+    console.log("button clicked");
+  };
+
   const orderArray = [];
 
   // Generate 15 orders
@@ -116,17 +124,18 @@ const OrderTable = () => {
                 <td className="px-6 py-4">{order.total}</td>
                 <td className="px-6 py-4">{order.orderStatus}</td>
                 <td className="px-6 py-4">
-                  <a
-                    href="#"
+                  <button
+                    onClick={togglePopup}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     View
-                  </a>
+                  </button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+        {showPopup && <OrderView onClose={togglePopup} />}
         <nav
           className="flex items-center flex-column flex-wrap md:flex-row justify-between pt-4"
           aria-label="Table navigation"
