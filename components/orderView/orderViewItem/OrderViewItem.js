@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import prodImg from "../../assets/images/it book.png";
+import prodImg from "../../../assets/images/it book.png";
 
-const OrderItem = () => {
+const OrderViewItem = () => {
   return (
-    <div className="bg-white p-4 my-4 border-b border-gray-100 max-w-[500px] mx-auto">
+    <div className="bg-white p-4 my-4 border-b border-gray-100 max-w-[500px]">
       <div className="flex flex-row">
         <Image
           src={prodImg}
@@ -34,4 +34,4 @@ const OrderItem = () => {
   );
 };
 
-export default OrderItem;
+export default OrderViewItem;
