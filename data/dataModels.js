@@ -60,3 +60,9 @@ export const orderedItemsForWholesaleConfirmation = [
     priceWithDiscount: 9000.0,
   },
 ];
+
+export const overallWholesaleOrderDetails = {
+  id: 787272,
+  deliveryFee: 3000.0,
+  total: 12000.0,
+};
