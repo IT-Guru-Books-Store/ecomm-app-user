@@ -39,3 +39,5 @@ const WholeSaleBookList = () => {
 };
 
 export default WholeSaleBookList;
+
+// Need to give delete option.

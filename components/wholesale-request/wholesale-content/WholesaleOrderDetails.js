@@ -9,9 +9,11 @@ const WholesaleOrderDetails = () => {
       <WholesaleOrderDetailsForm />
       <WholeSaleBookList />
       <WholesaleBookAdder />
-      <button className="w-[100%] bg-[#073763] rounded-md text-white p-2">
-        Place Order
-      </button>
+      <div className="sm:flex sm:flex-row-reverse">
+        <button className="w-[100%] sm:w-[50%] bg-[#073763] rounded-md text-white p-2">
+          Place Order
+        </button>
+      </div>
     </div>
   );
 };
