@@ -6,7 +6,7 @@ const WholesaleOrderDetailsForm = () => {
       <div className="grid sm:grid-cols-2 gap-x-6 w-full">
         <div className="mb-5">
           <label
-            for="first-name"
+            htmlFor="first-name"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             First Name
@@ -21,7 +21,7 @@ const WholesaleOrderDetailsForm = () => {
         </div>
         <div className="mb-5">
           <label
-            for="last-name"
+            htmlFor="last-name"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Last Name
@@ -36,7 +36,7 @@ const WholesaleOrderDetailsForm = () => {
         </div>
         <div className="mb-5">
           <label
-            for="business-type"
+            htmlFor="business-type"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Select your business type
@@ -53,7 +53,7 @@ const WholesaleOrderDetailsForm = () => {
         </div>
         <div className="mb-5">
           <label
-            for="contact-no-1"
+            htmlFor="contact-no-1"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Contact No <spam className="text-[10px] text-gray-400">1</spam>
@@ -68,7 +68,7 @@ const WholesaleOrderDetailsForm = () => {
         </div>
         <div className="mb-5">
           <label
-            for="contact-no-2"
+            htmlFor="contact-no-2"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Contact No <spam className="text-[10px] text-gray-400">2</spam>
@@ -83,7 +83,7 @@ const WholesaleOrderDetailsForm = () => {
         </div>
         <div className="mb-5">
           <label
-            for="address"
+            htmlFor="address"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Address
@@ -98,7 +98,7 @@ const WholesaleOrderDetailsForm = () => {
         </div>
         <div className="mb-5">
           <label
-            for="city"
+            htmlFor="city"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Nearest City
@@ -113,7 +113,7 @@ const WholesaleOrderDetailsForm = () => {
         </div>
         <div className="mb-5">
           <label
-            for="district"
+            htmlFor="district"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             District
