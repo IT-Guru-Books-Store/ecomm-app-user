@@ -33,3 +33,30 @@ export const addedBookList = [
     qty: 20,
   },
 ];
+
+export const orderedItemsForWholesaleConfirmation = [
+  {
+    id: "6277289",
+    name: "ICT AL Sinhala Medium",
+    price: 499.0,
+    quantity: 20,
+    discountPerBook: "10%",
+    priceWithDiscount: 9000.0,
+  },
+  {
+    id: "77488448",
+    name: "ICT AL Sinhala Medium",
+    price: 499.0,
+    quantity: 20,
+    discountPerBook: "10%",
+    priceWithDiscount: 9000.0,
+  },
+  {
+    id: "627289",
+    name: "ICT AL Sinhala Medium",
+    price: 499.0,
+    quantity: 20,
+    discountPerBook: "10%",
+    priceWithDiscount: 9000.0,
+  },
+];
