@@ -1,6 +1,7 @@
 import React from "react";
 import OrderItemsTable from "./confirmation-components/OrderItemsTable";
 import OverallDetailTable from "./confirmation-components/OverallDetailTable";
+import OrderItemCardList from "./confirmation-components/OrderItemCardList";
 
 const Confirmation = () => {
   return (
@@ -10,6 +11,9 @@ const Confirmation = () => {
       </h3>
       <div className="hidden sm:block">
         <OrderItemsTable />
+      </div>
+      <div className="sm:hidden">
+        <OrderItemCardList />
       </div>
       <div className="sm:grid sm:grid-cols-4 my-6">
         <div className="sm:col-span-2 sm:col-start-3">

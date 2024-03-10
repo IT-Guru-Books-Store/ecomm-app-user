@@ -38,31 +38,31 @@ export const orderedItemsForWholesaleConfirmation = [
   {
     id: "6277289",
     name: "ICT AL Sinhala Medium",
-    price: 499.0,
+    price: "499.00",
     quantity: 20,
     discountPerBook: "10%",
-    priceWithDiscount: 9000.0,
+    priceWithDiscount: "9000.00",
   },
   {
     id: "77488448",
     name: "ICT AL Sinhala Medium",
-    price: 499.0,
+    price: "499.00",
     quantity: 20,
     discountPerBook: "10%",
-    priceWithDiscount: 9000.0,
+    priceWithDiscount: "9000.00",
   },
   {
     id: "627289",
     name: "ICT AL Sinhala Medium",
-    price: 499.0,
+    price: "499.00",
     quantity: 20,
     discountPerBook: "10%",
-    priceWithDiscount: 9000.0,
+    priceWithDiscount: "9000.00",
   },
 ];
 
 export const overallWholesaleOrderDetails = {
   id: 787272,
-  deliveryFee: 3000.0,
-  total: 12000.0,
+  deliveryFee: "3000.00",
+  total: "30000.00",
 };

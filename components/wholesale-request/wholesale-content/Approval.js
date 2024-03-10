@@ -1,5 +1,7 @@
 import { WHOLESALE_REQUEST_WAITING_MSG } from "@/constants/constant";
+import Image from "next/image";
 import React from "react";
+import Waiting from "../../../assets/svg/Waiting.svg";
 
 const Approval = () => {
   return (
@@ -10,6 +12,7 @@ const Approval = () => {
         </div>
         <div>
           <p className="text-gray-700">{WHOLESALE_REQUEST_WAITING_MSG}</p>
+          <Image className="m-auto" src={Waiting} width={300} height={300} />
         </div>
       </div>
     </div>
