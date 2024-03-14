@@ -13,6 +13,7 @@ const OrderView = ({ onClose }) => {
           <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-600">
             <div className="flex flex-row gap-x-5">
               {/* block 1 */}
+              {/* test */}
               <div className="flex flex-col w-[350px] bg-green-500 p-3">
                 <div className="flex flex-row gap-x-3">
                   <div className="w-[50%] bg-orange-400">
