@@ -7,7 +7,7 @@ const OrderTable = () => {
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
-    console.log("button clicked");
+    //console.log("button clicked");
   };
 
   const orderArray = [];
@@ -79,28 +79,28 @@ const OrderTable = () => {
   return (
     <div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
             <tr>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="hidden md:block px-6 py-3">
                 Order ID
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-2 md:px-6 py-3">
                 Order Placed Date
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="hidden md:block px-6 py-3">
                 Paid Date
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-2 md:px-6 py-3">
                 Payment Method
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-2 md:px-6 py-3">
                 Total
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="hidden md:block px-6 py-3">
                 Order Status
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-2 md:px-6 py-3">
                 Action
               </th>
             </tr>
@@ -108,22 +108,21 @@ const OrderTable = () => {
 
           <tbody>
             {currentOrders.map((order, index) => (
-              <tr
-                key={index}
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-              >
-                <th
+              <tr key={index} className="bg-white border-b hover:bg-gray-50 ">
+                <td
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="hidden md:block px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
                 >
                   {order.orderNo}
-                </th>
-                <td className="px-6 py-4">{order.orderPlacedDate}</td>
-                <td className="px-6 py-4">{order.paidDate}</td>
-                <td className="px-6 py-4">{order.paymentMethod}</td>
-                <td className="px-6 py-4">{order.total}</td>
-                <td className="px-6 py-4">{order.orderStatus}</td>
-                <td className="px-6 py-4">
+                </td>
+                <td className="px-2 md:px-6 py-4">{order.orderPlacedDate}</td>
+                <td className="hidden md:block px-6 py-4">{order.paidDate}</td>
+                <td className="px-2 md:px-6 py-4">{order.paymentMethod}</td>
+                <td className="px-2 md:px-6 py-4">{order.total}</td>
+                <td className="hidden md:block px-6 py-4">
+                  {order.orderStatus}
+                </td>
+                <td className="px-2 md:px-6 py-4">
                   <button
                     onClick={togglePopup}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"

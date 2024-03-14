@@ -4,8 +4,8 @@ import prodImg from "../../../assets/images/it book.png";
 
 const OrderViewItem = () => {
   return (
-    <div className="bg-white p-4 my-4 border-b border-gray-100 max-w-[500px]">
-      <div className="flex flex-row">
+    <div className="bg-white md:p-4 md:my-4 border-b border-gray-100 max-w-[500px]">
+      <div className="flex flex-">
         <Image
           src={prodImg}
           alt="product-img"
