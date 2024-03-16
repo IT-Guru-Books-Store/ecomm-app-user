@@ -142,7 +142,7 @@ const Checkout = () => {
                     </label>
                   </div>
                   <div>
-                    <Image src={paymentImg} />
+                    <Image src={paymentImg} alt="payment-img" />
                   </div>
                   <div className="py-4 px-2">
                     <p>

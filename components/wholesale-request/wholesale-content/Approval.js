@@ -12,7 +12,13 @@ const Approval = () => {
         </div>
         <div>
           <p className="text-gray-700">{WHOLESALE_REQUEST_WAITING_MSG}</p>
-          <Image className="m-auto" src={Waiting} width={300} height={300} />
+          <Image
+            className="m-auto"
+            src={Waiting}
+            width={300}
+            height={300}
+            alt="wiating for confirmation"
+          />
         </div>
       </div>
     </div>
