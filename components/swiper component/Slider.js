@@ -29,10 +29,10 @@ const Slider = () => {
         className="w-[400px] md:max-lg:w-[85%] md:max-lg:h-[85%] lg:w-[98%] lg:h-[10%]"
       >
         <SwiperSlide>
-          <Image src={sl_1} />
+          <Image src={sl_1} alt="swiper-img" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={sl_2} />
+          <Image src={sl_2} alt="swiper-img" />
         </SwiperSlide>
       </Swiper>
 

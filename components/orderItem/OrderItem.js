@@ -4,12 +4,12 @@ import prodImg from "../../assets/images/it book.png";
 
 const OrderItem = () => {
   return (
-    <div className="bg-white p-4 my-4 border-b border-gray-100 max-w-[500px] mx-auto">
+    <div className="bg-white p-4 my-4 border-b border-gray-100 max-w-[700px] max-h-[200px]">
       <div className="flex flex-row">
         <Image
           src={prodImg}
           alt="product-img"
-          className="rounded-lg w-[26%] object-cover"
+          className="rounded-lg w-[18%] object-cover"
         />
         <div className="flex-1 ml-4">
           <div className="flex flex-row items-start justify-between">
